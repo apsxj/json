@@ -1,0 +1,18 @@
+{
+  "name": "apsxj/json",
+  "description": "JSON 1.0 Library for Web APIs",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Roderic Linguri",
+          "email": "apsxj@mail.com"
+      }
+  ],
+  "autoload": {
+    "psr-4": {
+      "apsxj\\json\\": "src/"
+    }
+  },
+  "require": {}
+}
