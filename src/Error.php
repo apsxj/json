@@ -9,7 +9,7 @@
  * @copyright 2021 Roderic Linguri
  * @license   https://github.com/apsxj/json/blob/main/LICENSE MIT
  * @link      https://github.com/apsxj/json
- * @version   0.1.0
+ * @version   0.1.1
  * @since     0.1.0
  */
 
