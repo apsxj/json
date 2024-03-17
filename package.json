@@ -1,0 +1,29 @@
+{
+    "user": "apsxj",
+    "name": "json",
+    "branch": "main",
+    "category": "Utilities",
+    "description": "JSON 1.0 API",
+    "version": "0.1.1",
+    "copyright": "2023 APSXJ",
+    "license": "http://www.apache.org/licenses/ Apache License",
+    "author": {
+        "name": "Roderic Linguri",
+        "email": "apsxj@mail.com",
+        "url": "https://apsxj.com"
+    },
+    "scripts": {
+        "install": "php ./bin/install.php"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:apsxj/json.git"
+    },
+    "dependencies": {},
+    "devDependencies": {},
+    "directories": {},
+    "config": {
+        "env": [],
+        "prefix": "JSON"
+    }
+}

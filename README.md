@@ -1,110 +1,28 @@
 # json #
 
-_JSON 1.0 Library for Web APIs_
+_JSON 1.0 API_
 
-This library was designed using the [JSON:API v1.0 STABLE](https://jsonapi.org/) specification.
+| <!--   --> | <!--                                  --> |
+|------------|-------------------------------------------|
+| Identifier | com.apsxj.json                            |
+| Author     | Roderic Linguri <apsxj@mail.com>          |
+| Copyright  | 2023 APSXJ •  All Rights Reserved         |
+| License    | [Apache](../../blob/develop/LICENSE)      |
+| Version    | 0.1.1 (Pre-Release)                       |
+| Requires   | PHP 7, Apache 2.4, MySQL 8.0              |
 
 ### Getting Started ###
 
-1. Add the following to your `composer.json` file:
+1. Clone this repository with `git clone git@github.com:apsxj/json.git json`
 
-```JavaScript
-  "require": {
-    "apsxj/json": "dev-main"
-  },
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/apsxj/json.git"
-    }
-  ]
-```
+2. Check out the current branch with `git checkout main`
 
-2. Run `composer install`
+3. After cloning, navigate to the root directory and run `php ./bin/install.php`
 
-3. Before calling any of the methods, require the vendor autoloader
+4. If adding this package as a dependency to your project, add the following to your `package.json` file:
 
-```PHP
-// For example, from the root directory...
-require_once(__DIR__ . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
-```
-
-4. To create a `Response` object and render it:
-
-```PHP
-<?php
-
-// unwrap the Response class from the apsxj\json namespace
-use apsxj\json\Response;
-
-// Create a new response
-$response = new Response();
-
-// Add some data
-$response->appendData(
-  array(
-    'method' => 'test',
-    'result' => 'success'
-  )
-);
-
-// Render the response
-$response->render();
-```
-
-_Output should look something like this:_
-
-```JavaScript
-{
-  "links": {
-    "self": "https:\/\/localhost\/api\/test"
-  },
-  "meta": {
-    "timestamp": 1620587659,
-    "object": "dictionary",
-    "count": 1
-  },
-  "data": [
-    {
-      "method": "test",
-      "result": "success"
-    }
-  ]
-}
-```
-
-4. To create an error response and render it:
-
-```PHP
-<?php
-
-// unwrap the Response class from the apsxj\json namespace
-use apsxj\json\Response;
-
-// Create a new response
-$response = new Response();
-
-// Add the error
-$response->appendError(
-  404,
-  'Not Found',
-  'The requested resource was not found'
-);
-
-// Render the response
-$response->render();
-```
-
-_Output should look something like this:_
-
-```JavaScript
-{
-  "errors": [
-    {
-      "status": 404,
-      "title": "Not Found",
-      "detail": "The requested resource was not found"
-    }
-  ]
-}
+```json
+  "dependencies": {
+    "json": "apsxj/json#main"
+  }
 ```

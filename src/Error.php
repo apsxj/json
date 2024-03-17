@@ -1,21 +1,19 @@
 <?php
 
 /**
- * JSON Error Object
+ * json Error object
  *
- * @category  Server Software
- * @package   apsxj/json
- * @author    Roderic Linguri <apsxj@mail.com>
- * @copyright 2021 Roderic Linguri
- * @license   https://github.com/apsxj/json/blob/main/LICENSE MIT
- * @link      https://github.com/apsxj/json
- * @version   0.1.1
- * @since     0.1.0
+ * @category   Utilities
+ * @package    json
+ * @link       https://apsxj.com
+ * @author     Roderic Linguri <apsxj@mail.com>
+ * @copyright  2023 APSXJ * All Rights Reserved
+ * @license    http://www.apache.org/licenses/ Apache License
+ * @version    0.1.1
+ * @since      0.1.1
  */
 
-namespace apsxj\json;
-
-class Error
+class JSONError
 {
   /** @property integer status code */
   private $status;

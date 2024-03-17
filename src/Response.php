@@ -1,21 +1,19 @@
 <?php
 
 /**
- * JSON Response Object
+ * json Response object
  *
- * @category  Server Software
- * @package   apsxj/json
- * @author    Roderic Linguri <apsxj@mail.com>
- * @copyright 2021 Roderic Linguri
- * @license   https://github.com/apsxj/json/blob/main/LICENSE MIT
- * @link      https://github.com/apsxj/json
- * @version   0.1.1
- * @since     0.1.0
+ * @category   Utilities
+ * @package    json
+ * @link       https://apsxj.com
+ * @author     Roderic Linguri <apsxj@mail.com>
+ * @copyright  2023 APSXJ * All Rights Reserved
+ * @license    http://www.apache.org/licenses/ Apache License
+ * @version    0.1.1
+ * @since      0.1.1
  */
 
-namespace apsxj\json;
-
-class Response
+class JSONResponse
 {
   /** @property integer HTTP Status */
   private $status;
@@ -39,9 +37,9 @@ class Response
   {
     $this->status = 204; // Initialize to 'No Content'
     $this->errors = array();
-    $this->meta = new Meta();
+    $this->meta = new JSONMeta();
     $this->data = array();
-    $this->links = new Links();
+    $this->links = new JSONLinks();
   }
 
   /**
@@ -55,7 +53,7 @@ class Response
   public function appendError($status, $title, $detail)
   {
     $this->status = $status;
-    array_push($this->errors, new Error($status, $title, $detail));
+    array_push($this->errors, new JSONError($status, $title, $detail));
   }
 
   /**
@@ -169,6 +167,6 @@ class Response
     }
 
     header('Content-Type: application/json', true, $this->status);
-    echo json_encode($assoc);
+    echo json_encode($assoc, JSON_UNESCAPED_SLASHES);
   }
 }
